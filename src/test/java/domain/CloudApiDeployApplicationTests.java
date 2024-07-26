@@ -1,4 +1,4 @@
-package me.dio.cloud_api_deploy;
+package domain;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
