@@ -1,11 +1,13 @@
 package domain.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.math.BigDecimal;
 
 @Entity(name = "tb_card")
+@Data
 public class Card {
 
     @Id
@@ -18,27 +20,5 @@ public class Card {
     @Column(name = "special_limit", nullable = false, scale = 2, precision = 13)
     private BigDecimal limit;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    public BigDecimal getLimit() {
-        return limit;
-    }
-
-    public void setLimit(BigDecimal limit) {
-        this.limit = limit;
-    }
 }
